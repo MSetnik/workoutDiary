@@ -16,32 +16,11 @@ export default function App () {
   const getData = async () => {
     const db = await CreateDatabase();
     console.log(db);
-    // const res = db.transaction((tx) => {
-    //   tx.executeSql(
-    //     "SELECT * FROM Category",
-    //     [""],
-    //     (tx, result) => {
-    //       console.log(result.rows);
-    //     }
-    //   );
-    // });
-
-    // return res;
   };
 
   useEffect(() => {
     getData();
   }, []);
-
-  // db.transaction((tx) => {
-  //   tx.executeSql(
-  //     "SELECT * FROM Category",
-  //     [""],
-  //     (tx, result) => {
-  //       console.log(result.rows);
-  //     }
-  //   );
-  // });
 
   return (
     <NavigationContainer>
