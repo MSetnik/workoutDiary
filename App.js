@@ -13,9 +13,9 @@ import * as SQLite from "expo-sqlite";
 import { CreateDatabase } from "./src/database/database";
 
 export default function App () {
-  const getData = () => {
-    const db = CreateDatabase();
-
+  const getData = async () => {
+    const db = await CreateDatabase();
+    console.log(db);
     // const res = db.transaction((tx) => {
     //   tx.executeSql(
     //     "SELECT * FROM Category",
